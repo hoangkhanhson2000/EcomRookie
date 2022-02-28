@@ -15,18 +15,16 @@ namespace Rookie.Ecom.Business
         {
             CreateMap<CategoryDto, Category>()
                .ForMember(d => d.ImageUrl, t => t.Ignore());
-            CreateMap<ProductDto, Product>()
-             .ForMember(d => d.ImageUrl, t => t.ToString());
-            CreateMap<UserDto, User>()
-           .ForMember(d => d.Id, t => t.Ignore());
-            CreateMap<RatingDto, Rating>()
-           .ForMember(d => d.Id, t => t.Ignore());
-            CreateMap<CartDto, Cart>()
-          .ForMember(d => d.Id, t => t.Ignore());
-            CreateMap<OrderDto, Order>()
-          .ForMember(d => d.Id, t => t.Ignore());
-            CreateMap<Address, AddressDto>()
-            .ForMember(d => d.Id, t => t.Ignore());
+            CreateMap<ProductDto, Product>();
+
+
+            CreateMap<UserDto, User>();
+          
+            CreateMap<RatingDto, Rating>();
+            CreateMap<CartDto, Cart>();
+            CreateMap<OrderDto, Order>();
+            CreateMap<Address, AddressDto>();
+            
 
         }
 
