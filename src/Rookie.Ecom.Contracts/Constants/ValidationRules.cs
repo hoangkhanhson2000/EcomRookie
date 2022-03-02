@@ -24,5 +24,16 @@
             public const int MinLenghCharactersForDesc = 0;
             public const int MaxLenghCharactersForDesc = 100;
         }
+        public static class UserRules
+        {
+            public const int MinLenghCharactersForFirstName = 0;
+            public const int MaxLenghCharactersForFirstName = 50;
+
+            public const int MinLenghCharactersForLastName = 0;
+            public const int MaxLenghCharactersForLastName = 50;
+
+            public const int MinLenghCharactersForEmail = 0;
+            public const int MaxLenghCharactersForEmail = 100;
+        }
     }
 }
