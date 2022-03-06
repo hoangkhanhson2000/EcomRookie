@@ -8,6 +8,7 @@ namespace Rookie.Ecom.Contracts.Constants
         public const string Rating = "api/rating";
         public const string Order = "api/order";
         public const string Cart = "api/cart";
+        public const string CartItem = "api/cartitem";
         public const string Address = "api/address";
 
     }

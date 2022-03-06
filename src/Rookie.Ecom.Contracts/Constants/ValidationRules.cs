@@ -35,5 +35,22 @@
             public const int MinLenghCharactersForEmail = 0;
             public const int MaxLenghCharactersForEmail = 100;
         }
+        public static class OrderRules
+        {
+            public const int MinLenghCharactersForUser = 0;
+            public const int MaxLenghCharactersForUser = 50;
+
+            public const int MinLenghCharactersForOrderName = 0;
+            public const int MaxLenghCharactersForOrderName = 50;
+        }
+        public static class CartRules
+        {
+            public const int MinLenghCharactersForCart = 0;
+            public const int MaxLenghCharactersForCart = 50;
+
+            public const int MinLenghCharactersForCartItem = 0;
+            public const int MaxLenghCharactersForCartItem = 50;
+
+        }
     }
 }

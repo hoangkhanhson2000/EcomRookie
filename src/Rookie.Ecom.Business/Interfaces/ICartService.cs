@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Rookie.Ecom.Business.Interfaces
 {
-    public interface ICartService
+    public interface ICartItemService
     {
-        Task<IEnumerable<CartDto>> GetAllAsync();
+        Task<IEnumerable<CartItemDto>> GetAllAsync();
 
-        Task<PagedResponseModel<CartDto>> PagedQueryAsync(string name, int page, int limit);
+        Task<PagedResponseModel<CartItemDto>> PagedQueryAsync(string name, int page, int limit);
 
-        Task<CartDto> GetByIdAsync(Guid id);
+        Task<CartItemDto> GetByIdAsync(Guid id);
 
-        Task<CartDto> AddAsync(CartDto cartDto);
+        Task<CartItemDto> AddAsync(CartItemDto cartDto);
 
         Task DeleteAsync(Guid id);
 
-        Task UpdateAsync(CartDto cartDto);
+        Task UpdateAsync(CartItemDto cartDto);
     }
 }
