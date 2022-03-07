@@ -31,7 +31,7 @@ namespace Rookie.Ecom.Web.Controllers
         public async Task<ActionResult> UpdateAsync([FromBody] CartDto cartDto)
         {
             Ensure.Any.IsNotNull(cartDto, nameof(cartDto));
-            Ensure.Any.IsNotNull(cartDto.CartName, nameof(cartDto.CartName));
+            Ensure.Any.IsNotNull(cartDto.Id, nameof(cartDto.Id));
             await _cartService.UpdateAsync(cartDto);
             return NoContent();
         }

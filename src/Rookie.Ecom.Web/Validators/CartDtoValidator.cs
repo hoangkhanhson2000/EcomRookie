@@ -15,9 +15,7 @@ namespace Rookie.Ecom.Web.Validators
             RuleFor(m => m.CartName)
                   .NotEmpty()
                   .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.CartName)));
-            RuleFor(m => m.CartItem)
-            .NotEmpty()
-            .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.CartItem)));
+      
 
             RuleFor(m => m.CartName)
                .MaximumLength(ValidationRules.CartRules.MaxLenghCharactersForCart)

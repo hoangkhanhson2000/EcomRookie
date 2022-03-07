@@ -10,6 +10,7 @@ namespace Rookie.Ecom.Contracts.Dtos
     public class OrderDto 
     {
         public Guid? Id { get; set; }
+
         [StringLength(maximumLength: 50)]
         public string OrderName { get; set; }
 

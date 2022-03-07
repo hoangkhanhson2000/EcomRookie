@@ -10,11 +10,12 @@ namespace Rookie.Ecom.Contracts.Dtos
     public class CartDto 
     {
         public Guid? Id { get; set; }
-        
+
+        [StringLength(maximumLength: 50)]
         public string CartName { get; set; }
 
-        public UserDto User { get; set; }
+        public ICollection<UserDto> User { get; set; }
 
-        public ICollection<CartItemDto> CartItem { get; set; }
+
     }
 }

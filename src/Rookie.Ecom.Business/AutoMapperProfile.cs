@@ -18,20 +18,24 @@ namespace Rookie.Ecom.Business
             CreateMap<ProductDto, Product>()
              .ForMember(d => d.Category, t => t.Ignore());
 
-            CreateMap<UserDto, User>();
-          
+            CreateMap<UserDto, User>()
+                .ForMember(d => d.Address, t => t.Ignore());
+
             CreateMap<RatingDto, Rating>()
             .ForMember(d => d.User, t => t.Ignore());
             CreateMap<CartDto, Cart>()
-            .ForMember(d => d.User, t => t.Ignore());
-            CreateMap<CartDto, Cart>();
-           
+            .ForMember(d => d.User, t => t.Ignore());           
+
+            CreateMap<CartItem, CartItemDto>();
+       
 
             CreateMap<OrderDto, Order>()
              .ForMember(d => d.User, t => t.Ignore());
             CreateMap<Address, AddressDto>();
+            CreateMap<RoleDto, Role>()
+            .ForMember(d => d.User, t => t.Ignore());
 
-             
+
 
 
         }
@@ -43,9 +47,10 @@ namespace Rookie.Ecom.Business
             CreateMap<User, UserDto>();
             CreateMap<Rating, RatingDto>();
             CreateMap<Order, OrderDto>();
-            CreateMap<Cart, CartDto>()
-            .ForMember(d => d.CartItem, t => t.Ignore());
+            CreateMap<Cart, CartDto>();
+            CreateMap<CartItem, CartItemDto>();
             CreateMap<Address, AddressDto>();
+            CreateMap<RoleDto, Role>();
 
         }
     }

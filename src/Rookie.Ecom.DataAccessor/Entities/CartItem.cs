@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,10 +13,8 @@ namespace Rookie.Ecom.DataAccessor.Entities
         public decimal Quantity { get; set; }
 
 
-        public Cart Cart { get; set; }
-
-
-        public Product Product { get; set; }
+        public IList<Cart> Cart { get; set; }
+        public IList<Product> Products { get; set; }
     }
     
 }
