@@ -10,11 +10,8 @@ namespace Rookie.Ecom.DataAccessor.Entities
 
         [StringLength(maximumLength: 100)]
         public string Comment { get; set; }
-
         
         public Product Product { get; set; }
-
-        
 
         public User User { get; set; }
     }

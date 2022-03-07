@@ -70,11 +70,8 @@ class NavMenu extends React.Component {
                                         Category
                   </NavLink>
                                 </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} className="text-dark" to="/product">
-                                        Product
-                                    </NavLink>
-                                </NavItem>
+                                
+                               
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/counter">
                                         Counter

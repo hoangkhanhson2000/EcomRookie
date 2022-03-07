@@ -9,12 +9,8 @@ namespace Rookie.Ecom.DataAccessor.Entities
         public decimal Price { get; set; }
 
         public decimal Quantity { get; set; }
-        
-       
 
         public Order Order { get; set; }
-
-      
 
         public Product Product { get; set; }
     }
