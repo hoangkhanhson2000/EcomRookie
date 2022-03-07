@@ -10,6 +10,7 @@ namespace Rookie.Ecom.Contracts.Dtos
     public class CartDto 
     {
         public Guid? Id { get; set; }
+        
         public string CartName { get; set; }
 
         public UserDto User { get; set; }

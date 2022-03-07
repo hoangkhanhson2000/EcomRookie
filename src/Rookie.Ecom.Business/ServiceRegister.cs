@@ -21,6 +21,7 @@ namespace Rookie.Ecom.Business
             services.AddTransient<IRatingService, RatingService>();
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<ICartService, CartService>();
+            services.AddTransient<ICartItemService, CartItemService>();
             services.AddTransient<IAddressService, AddressService>();
         }
     }

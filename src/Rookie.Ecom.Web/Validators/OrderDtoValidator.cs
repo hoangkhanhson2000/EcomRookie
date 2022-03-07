@@ -26,8 +26,8 @@ namespace Rookie.Ecom.Web.Validators
                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Price)));
 
             RuleFor(m => m.OrderName)
-               .MaximumLength(ValidationRules.OrderRules.MinLenghCharactersForOrderName)
-               .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.OrderRules.MinLenghCharactersForOrderName))
+               .MaximumLength(ValidationRules.OrderRules.MaxLenghCharactersForOrderName)
+               .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.OrderRules.MaxLenghCharactersForOrderName))
                .When(m => !string.IsNullOrWhiteSpace(m.OrderName));
 
            

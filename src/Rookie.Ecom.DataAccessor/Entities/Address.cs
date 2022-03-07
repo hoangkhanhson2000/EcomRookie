@@ -8,11 +8,10 @@ namespace Rookie.Ecom.DataAccessor.Entities
     [Table("Address")]
     public class Address : BaseEntity
     {
-        [Required]
+       
         [StringLength(maximumLength: 50)]
         public string AddressName { get; set; }
 
-        [Required]
         [StringLength(maximumLength: 100)]
         public string City { get; set; }
 

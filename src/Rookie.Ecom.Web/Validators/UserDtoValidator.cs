@@ -40,18 +40,18 @@ namespace Rookie.Ecom.Web.Validators
 
 
             RuleFor(m => m.FirstName)
-               .MaximumLength(ValidationRules.UserRules.MinLenghCharactersForFirstName)
-               .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.UserRules.MinLenghCharactersForFirstName))
+               .MaximumLength(ValidationRules.UserRules.MaxLenghCharactersForFirstName)
+               .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.UserRules.MaxLenghCharactersForFirstName))
                .When(m => !string.IsNullOrWhiteSpace(m.FirstName));
 
             RuleFor(m => m.LastName)
-               .MaximumLength(ValidationRules.UserRules.MinLenghCharactersForLastName)
-               .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.UserRules.MinLenghCharactersForLastName))
+               .MaximumLength(ValidationRules.UserRules.MaxLenghCharactersForLastName)
+               .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.UserRules.MaxLenghCharactersForLastName))
                .When(m => !string.IsNullOrWhiteSpace(m.LastName));
 
             RuleFor(m => m.LastName)
-             .MaximumLength(ValidationRules.UserRules.MinLenghCharactersForEmail)
-             .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.UserRules.MinLenghCharactersForEmail))
+             .MaximumLength(ValidationRules.UserRules.MaxLenghCharactersForEmail)
+             .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.UserRules.MaxLenghCharactersForEmail))
              .When(m => !string.IsNullOrWhiteSpace(m.Email));
         }
     }

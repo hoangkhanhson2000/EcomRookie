@@ -9,6 +9,7 @@ namespace Rookie.Ecom.Contracts.Dtos
     public class RoleDto 
     {
         public Guid? Id { get; set; }
+
         [Required]
         [StringLength(maximumLength: 50)]
         public string RoleName { get; set; }
@@ -16,8 +17,6 @@ namespace Rookie.Ecom.Contracts.Dtos
         [Required]
         [StringLength(maximumLength: 100)]
         public string Desc { get; set; }
-
-     
 
         public UserDto User { get; set; }
        

@@ -11,7 +11,6 @@ namespace Rookie.Ecom.DataAccessor.Entities
 
         public decimal Quantity { get; set; }
 
-       
 
         public Cart Cart { get; set; }
 
