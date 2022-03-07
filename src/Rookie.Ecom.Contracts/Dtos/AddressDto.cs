@@ -9,11 +9,11 @@ namespace Rookie.Ecom.Contracts.Dtos
     public class AddressDto 
     {
         public Guid? Id { get; set; }
-
+        [Required]
         [StringLength(maximumLength: 50)]
         public string AddressName { get; set; }
 
-       
+        [Required]
         [StringLength(maximumLength: 100)]
         public string City { get; set; }
 

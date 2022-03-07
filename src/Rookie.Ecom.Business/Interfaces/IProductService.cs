@@ -14,10 +14,10 @@ namespace Rookie.Ecom.Business.Interfaces
 
         Task<ProductDto> GetByIdAsync(Guid id);
 
-        Task<ProductDto> AddAsync(ProductDto productDto);
+        Task<ProductDto> AddAsync(ProductDto productyDto);
 
         Task DeleteAsync(Guid id);
 
-        Task UpdateAsync(ProductDto productDto);
+        Task UpdateAsync(ProductDto productyDto);
     }
 }

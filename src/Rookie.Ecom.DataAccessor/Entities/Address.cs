@@ -18,5 +18,7 @@ namespace Rookie.Ecom.DataAccessor.Entities
         [StringLength(maximumLength: 250)]
         public string Country { get; set; }
 
+        public User User { get; set; }
+
     }
 }

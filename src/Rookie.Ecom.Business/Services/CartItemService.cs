@@ -65,9 +65,9 @@ namespace Rookie.Ecom.Business.Services
         {
             var query = _baseRepository.Entities;
 
-            query = query.Where(x => string.IsNullOrEmpty(name) || x.Cart.ToString().Contains(name));
+            query = query.Where(x => string.IsNullOrEmpty(name) || x.Product.ToString().Contains(name));
 
-            query = query.OrderBy(x => x.Cart);
+            query = query.OrderBy(x => x.Product);
 
             var assets = await query
                 .AsNoTracking()

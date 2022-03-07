@@ -31,7 +31,7 @@ namespace Rookie.Ecom.Web.Controllers
         public async Task<ActionResult> UpdateAsync([FromBody] AddressDto addressDto)
         {
             Ensure.Any.IsNotNull(addressDto, nameof(addressDto));
-            Ensure.Any.IsNotNull(addressDto.Id, nameof(addressDto.Id));
+            Ensure.Any.IsNotNull(addressDto.AddressName, nameof(addressDto.AddressName));
             await _addressService.UpdateAsync(addressDto);
             return NoContent();
         }

@@ -34,7 +34,8 @@ namespace Rookie.Ecom.DataAccessor.Entities
         [StringLength(maximumLength: 100)]
         public string Password { get; set; }
 
-        public Address Address { get; set; }
+      
+
 
 
     }

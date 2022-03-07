@@ -9,11 +9,11 @@ namespace Rookie.Ecom.DataAccessor.Entities
 
     public class Cart : BaseEntity
     {
-        [StringLength(maximumLength: 50)]
+
         public string CartName { get; set; }
 
-        public ICollection<User> User { get; set; }
+        public User User { get; set; }
 
-        public CartItem CartItem { get; set; }
+        public IList<CartItem> CartItem { get; set; }
     }
 }

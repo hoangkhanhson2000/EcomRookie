@@ -38,8 +38,7 @@ namespace Rookie.Ecom.Contracts.Dtos
         //public OrderDto Order { get; set; }
         //public RatingDto Rating { get; set; }
         //public CartDto Cart { get; set; }
-
-        public IList<AddressDto> Address { get; set; }
+        public AddressDto Address { get; set; }
 
 
 
