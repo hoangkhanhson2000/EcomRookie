@@ -16,6 +16,17 @@ namespace Rookie.Ecom.Web.Validators
                   .NotEmpty()
                   .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Name)));
 
+            RuleFor(m => m.Desc)
+                  .NotEmpty()
+                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Desc)));
+            RuleFor(m => m.Price)
+                  .NotEmpty()
+                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Name)));
+
+            RuleFor(m => m.Cost)
+                  .NotEmpty()
+                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Desc)));
+
             RuleFor(m => m.Name)
                .MaximumLength(ValidationRules.ProductRules.MaxLenghCharactersForName)
                .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.ProductRules.MaxLenghCharactersForName))
@@ -25,6 +36,7 @@ namespace Rookie.Ecom.Web.Validators
                .MaximumLength(ValidationRules.ProductRules.MaxLenghCharactersForDesc)
                .WithMessage(string.Format(ErrorTypes.Common.MaxLengthError, ValidationRules.ProductRules.MaxLenghCharactersForDesc))
                .When(m => !string.IsNullOrWhiteSpace(m.Desc));
+
         }
     }
 }

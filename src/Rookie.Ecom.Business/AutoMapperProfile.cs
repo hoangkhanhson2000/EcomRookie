@@ -17,6 +17,7 @@ namespace Rookie.Ecom.Business
                .ForMember(d => d.Products, t => t.Ignore());
             CreateMap<ProductDto, Product>()
              .ForMember(d => d.Category, t => t.Ignore());
+           
 
             CreateMap<UserDto, User>();
           

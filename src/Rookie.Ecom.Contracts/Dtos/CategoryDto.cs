@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Rookie.Ecom.Contracts.Dtos
 {
@@ -11,7 +12,9 @@ namespace Rookie.Ecom.Contracts.Dtos
 
         public string Desc { get; set; }
 
-
-        
+        public static Task GetDataAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

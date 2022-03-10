@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Rookie.Ecom.Contracts.Dtos
@@ -23,6 +24,6 @@ namespace Rookie.Ecom.Contracts.Dtos
 
         public bool IsFeatured { get; set; }
 
-        public CategoryDto Category { get; set; }
+        public ICollection<CategoryDto>Category  { get; set; }
     }
 }

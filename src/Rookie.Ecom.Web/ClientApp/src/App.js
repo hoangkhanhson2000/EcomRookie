@@ -6,9 +6,11 @@ import Category from './components/Category';
 
 import Counter from './components/Counter';
 import FetchData from './components/FetchData';
+import Product from './components/Product';
 
 import CallbackPage from './components/callback/CallbackPage';
 import ProfilePage from './components/profile/ProfilePage';
+import "./App.css";
 
 
 export default () => (
@@ -16,6 +18,7 @@ export default () => (
         <Route exact path="/" component={Home} />
         <Route path="/counter" component={Counter} />
         <Route path="/category/:page?" component={Category} />
+        <Route path="/product/:page?" component={Product} />
     
        
         <Route path="/fetch-data/:startDateIndex?" component={FetchData} />
