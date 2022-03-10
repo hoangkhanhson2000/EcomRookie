@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Rookie.Ecom.DataAccessor.Entities
@@ -22,6 +23,6 @@ namespace Rookie.Ecom.DataAccessor.Entities
 
         public bool IsFeatured { get; set; }
 
-        public Category Category { get; set; }
+        public ICollection<Category> Category { get; set; }
     }
 }

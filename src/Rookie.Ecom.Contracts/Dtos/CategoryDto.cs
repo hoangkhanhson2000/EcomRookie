@@ -12,9 +12,6 @@ namespace Rookie.Ecom.Contracts.Dtos
 
         public string Desc { get; set; }
 
-        public static Task GetDataAsync()
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }

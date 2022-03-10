@@ -23,7 +23,7 @@ namespace Rookie.Ecom.Web.Validators
                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Email)));
             RuleFor(m => m.Age)
                  .NotEmpty()
-                 .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Address)));
+                 .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Age)));
             RuleFor(m => m.Address)
                  .NotEmpty()
                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Address)));

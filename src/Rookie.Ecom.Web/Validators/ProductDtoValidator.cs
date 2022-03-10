@@ -21,11 +21,11 @@ namespace Rookie.Ecom.Web.Validators
                   .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Desc)));
             RuleFor(m => m.Price)
                   .NotEmpty()
-                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Name)));
+                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Price)));
 
             RuleFor(m => m.Cost)
                   .NotEmpty()
-                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Desc)));
+                  .WithMessage(x => string.Format(ErrorTypes.Common.RequiredError, nameof(x.Cost)));
 
             RuleFor(m => m.Name)
                .MaximumLength(ValidationRules.ProductRules.MaxLenghCharactersForName)

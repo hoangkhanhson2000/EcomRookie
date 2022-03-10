@@ -95,7 +95,7 @@ export default function Sidebar() {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Staff</h3>
                     <ul className="sidebarList">
-                        <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/swagger/index.html" className="link">
+                        <Link onClick={() => window.location.reload()} style={{ color: 'inherit', textDecoration: 'inherit' }} to="/swagger/index.html"className="link">
                         <li className="sidebarListItem">
                             <WorkOutline className="sidebarIcon" />
                             Manage

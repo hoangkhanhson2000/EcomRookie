@@ -12,23 +12,23 @@ using System.Threading.Tasks;
 
 namespace Rookie.Ecom.Business.Services
 {
-    public class CategoryService : ICategoryService
+    public class AddressService : IAddressService
     {
-        private readonly IBaseRepository<Category> _baseRepository;
+        private readonly IBaseRepository<Address> _baseRepository;
         private readonly IMapper _mapper;
 
-        public CategoryService(IBaseRepository<Category> baseRepository, IMapper mapper)
+        public AddressService(IBaseRepository<Address> baseRepository, IMapper mapper)
         {
             _baseRepository = baseRepository;
             _mapper = mapper;
         }
 
-        public async Task<CategoryDto> AddAsync(CategoryDto categoryDto)
+        public async Task<AddressDto> AddAsync(AddressDto addressDto)
         {
-            Ensure.Any.IsNotNull(categoryDto, nameof(categoryDto));
-            var category = _mapper.Map<Category>(categoryDto);
-            var item = await _baseRepository.AddAsync(category);
-            return _mapper.Map<CategoryDto>(item);
+            Ensure.Any.IsNotNull(addressDto, nameof(addressDto));
+            var address = _mapper.Map<Address>(addressDto);
+            var item = await _baseRepository.AddAsync(address);
+            return _mapper.Map<AddressDto>(item);
         }
 
         public async Task DeleteAsync(Guid id)
@@ -36,19 +36,19 @@ namespace Rookie.Ecom.Business.Services
             await _baseRepository.DeleteAsync(id);
         }
 
-        public async Task UpdateAsync(CategoryDto categoryDto)
+        public async Task UpdateAsync(AddressDto addressDto)
         {
-            var category = _mapper.Map<Category>(categoryDto);
-            await _baseRepository.UpdateAsync(category);
+            var address = _mapper.Map<Address>(addressDto);
+            await _baseRepository.UpdateAsync(address);
         }
 
-        public async Task<IEnumerable<CategoryDto>> GetAllAsync()
+        public async Task<IEnumerable<AddressDto>> GetAllAsync()
         {
             var categories = await _baseRepository.GetAllAsync();
-            return _mapper.Map<List<CategoryDto>>(categories);
+            return _mapper.Map<List<AddressDto>>(categories);
         }
 
-        public async Task<CategoryDto> GetByIdAsync(Guid id)
+        public async Task<AddressDto> GetByIdAsync(Guid id)
         {
             // map roles and users: collection (roleid, userid)
             // upsert: delete, update, insert
@@ -57,28 +57,28 @@ namespace Rookie.Ecom.Business.Services
             // input-n vs db-yes => delete
             // input-y vs db-y => update
             // unique, distinct, no-duplicate
-            var category = await _baseRepository.GetByIdAsync(id);
-            return _mapper.Map<CategoryDto>(category);
+            var address = await _baseRepository.GetByIdAsync(id);
+            return _mapper.Map<AddressDto>(address);
         }
 
-        public async Task<PagedResponseModel<CategoryDto>> PagedQueryAsync(string name, int page, int limit)
+        public async Task<PagedResponseModel<AddressDto>> PagedQueryAsync(string name, int page, int limit)
         {
             var query = _baseRepository.Entities;
 
-            query = query.Where(x => string.IsNullOrEmpty(name) || x.Name.Contains(name));
+            query = query.Where(x => string.IsNullOrEmpty(name) || x.AddressName.Contains(name));
 
-            query = query.OrderBy(x => x.Name);
+            query = query.OrderBy(x => x.AddressName);
 
             var assets = await query
                 .AsNoTracking()
                 .PaginateAsync(page, limit);
 
-            return new PagedResponseModel<CategoryDto>
+            return new PagedResponseModel<AddressDto>
             {
                 CurrentPage = assets.CurrentPage,
                 TotalPages = assets.TotalPages,
                 TotalItems = assets.TotalItems,
-                Items = _mapper.Map<IEnumerable<CategoryDto>>(assets.Items)
+                Items = _mapper.Map<IEnumerable<AddressDto>>(assets.Items)
             };
         }
 

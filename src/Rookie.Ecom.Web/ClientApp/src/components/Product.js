@@ -26,9 +26,17 @@ class Product extends Component {
         return (
             <div>
                 <h1>Product</h1>
+                
                 <p>This component demonstrates fetching data from the server and working with URL parameters.</p>
                 {renderProductTable(this.props)}
                 {renderPagination(this.props)}
+                <b>Add Some Product?</b>
+                <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/AddProduct" >
+
+                    <button className="sidebarListItem active">
+                        Add Product
+                    </button>
+                </Link>
             </div>
         );
     }
@@ -47,7 +55,7 @@ function renderProductTable(props) {
                     <th>Price</th>
                     <th>Cost</th>
                     <th>IsFeatured</th>
-                    <th>Category</th>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -59,8 +67,8 @@ function renderProductTable(props) {
                         <td>{cat.imageUrl}</td>
                         <td>{cat.price}</td>
                         <td>{cat.cost}</td>
-                        <td>{cat.isFeatured + "" }</td>
-                        <td>{cat.categoryid}</td>
+                        <td>{cat.isFeatured + ""}</td>
+                        
                     </tr>
                 )}
             </tbody>
