@@ -14,6 +14,6 @@ namespace Rookie.Ecom.DataAccessor.Entities
 
         public User User { get; set; }
 
-        public IList<CartItem> CartItem { get; set; }
+        public ICollection<CartItem> CartItem { get; set; }
     }
 }

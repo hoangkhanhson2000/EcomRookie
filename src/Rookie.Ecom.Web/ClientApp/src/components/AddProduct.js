@@ -15,7 +15,7 @@ export default function AddProduct() {
                 </div>
                 <div className="addProductItem">
                     <label>Description</label>
-                    <input type="text-area" placeholder="123" />
+                    <input type="text-area" placeholder="This is New Product ..." />
                 </div>
               
                 <div className="addProductItem">
@@ -24,7 +24,7 @@ export default function AddProduct() {
                 </div>
                 <div className="addProductItem">
                     <label>Price</label>
-                    <input type="number" placeholder="" />
+                    <input type="number" placeholder="VND" />
                 </div>
                 <div className="addProductItem">
                     <label>Stock/Cost</label>
@@ -38,6 +38,10 @@ export default function AddProduct() {
                     </select>
 
 
+                </div>
+                <div className="addProductItem">
+                    <label>Category</label>
+                    <input type="text-area" placeholder="Food or Drink?" />
                 </div>
                 <button className="addProductButton">Create</button>
             </form>

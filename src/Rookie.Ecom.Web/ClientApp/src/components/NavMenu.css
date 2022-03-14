@@ -3,10 +3,12 @@
     text-align: center;
     word-break: break-all;
    
+   
  }
 
 html {
-  font-size: 14px;
+  font-size: 15px;
+
 }
 @media (min-width: 768px) {
   html {
@@ -18,5 +20,8 @@ html {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
+.Home {
+  color:white
+}
 
 

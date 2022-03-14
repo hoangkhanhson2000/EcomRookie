@@ -10,6 +10,7 @@ import {
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './NavMenu.css';
+import Logo from './image/NashTechLogo.png';
 
 import userManager from '../utils/userManager';
 import { connect } from 'react-redux';
@@ -46,13 +47,23 @@ class NavMenu extends React.Component {
         return (
             <header>
                 <Navbar
-                    className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3"
+                    className="navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3 bg-danger"
                     light
                 >
                     <Container>
                         <NavbarBrand tag={Link} to="/">
-                            Rookie.Ecom.Web
-            </NavbarBrand>
+
+                            <img src={Logo} width="50" height="50" />
+                        </NavbarBrand>
+                        <p>&nbsp;</p>
+
+
+
+                        <NavbarBrand tag={Link} to="/">
+                            <b className="Home">
+                                Rookie.Ecom.Web
+                            </b>
+                        </NavbarBrand>
                         <NavbarToggler onClick={this.toggle} className="mr-2" />
                         <Collapse
                             className="d-sm-inline-flex flex-sm-row-reverse"
@@ -63,29 +74,29 @@ class NavMenu extends React.Component {
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/">
                                         Home
-                  </NavLink>
+                                    </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/category">
                                         Category
-                  </NavLink>
+                                    </NavLink>
                                 </NavItem>
-                                
-                               
+
+
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/counter">
                                         Counter
-                  </NavLink>
+                                    </NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/fetch-data">
                                         Fetch data
-                  </NavLink>
+                                    </NavLink>
                                 </NavItem>
 
                                 {isAuthenticated ? (
                                     <NavItem>
-                                        <NavLink tag={Link} className="text-primary" to="/profile">
+                                        <NavLink tag={Link} className="text-light" to="/profile">
                                             {user.profile.given_name}
                                         </NavLink>
                                     </NavItem>
@@ -94,7 +105,7 @@ class NavMenu extends React.Component {
                                 )}
                                 <NavItem>
                                     <button
-                                        className="btn btn-primary"
+                                        className="btn btn-warning"
                                         onClick={
                                             isAuthenticated ? onLogoutButtonClick : onLoginButtonClick
                                         }
@@ -104,7 +115,7 @@ class NavMenu extends React.Component {
                                 </NavItem>
                                 {isAdmin ? (
                                     <NavItem>
-                                        <button className="btn btn-warning">Admin</button>
+                                        <button className="btn btn-info">Admin</button>
                                     </NavItem>
                                 ) : (
                                     <React.Fragment />

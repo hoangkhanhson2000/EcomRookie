@@ -21,8 +21,8 @@ namespace Rookie.Ecom.Identity
 
                     Claims = new List<Claim>
                     {
-                        new Claim("given_name", "Jhon"),
-                        new Claim("family_name", "Doe"),
+                        new Claim("given_name", "Lee"),
+                        new Claim("family_name", "Sin"),
                         new Claim("role", "Admin")
                     }
                 },
@@ -34,8 +34,8 @@ namespace Rookie.Ecom.Identity
 
                     Claims = new List<Claim>
                     {
-                        new Claim("given_name", "Jane"),
-                        new Claim("family_name", "Dae"),
+                        new Claim("given_name", "Khanh Son"),
+                        new Claim("family_name", "Hoang"),
                         new Claim("role", "User")
                     }
                 }

@@ -5,21 +5,21 @@ import Sidebar from './Sidebar';
 
 
 export default props => (
-  <div>
-       
+    <div>
+
         <NavMenu />
-        
-            <div className="container-fluid">
+
+        <div className="container-fluid">
             <Sidebar />
-           
+
             <Container>
                 {props.children}
             </Container>
-                </div>
-               
-            
-       
-        
-    
-  </div>
+        </div>
+
+
+
+
+
+    </div>
 );

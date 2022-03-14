@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { actionCreators } from '../store/Product';
 
 class Product extends Component {
+   
     componentDidMount() {
         // This method is called when the component is first added to the document
         this.ensureDataFetched();
@@ -24,6 +25,7 @@ class Product extends Component {
 
     render() {
         return (
+            
             <div>
                 <h1>Product</h1>
                 
