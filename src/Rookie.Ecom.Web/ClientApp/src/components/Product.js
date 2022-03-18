@@ -28,7 +28,12 @@ class Product extends Component {
             
             <div>
                 <h1>Product</h1>
-                
+                <div className="searchForm">
+                    <form>
+                        <input type="text" id="filter" placeholder="Search for..."/>
+                    </form>
+         
+                </div>
                 <p>This component demonstrates fetching data from the server and working with URL parameters.</p>
                 {renderProductTable(this.props)}
                 {renderPagination(this.props)}

@@ -31,7 +31,7 @@ export default function Sidebar() {
                     <h3 className="sidebarTitle">Dashboard</h3>
                     <ul className="sidebarList">
                         <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/" >
-                       
+
                             <li className="sidebarListItem active">
                                 <LineStyle className="sidebarIcon" />
                                 Home
@@ -63,9 +63,9 @@ export default function Sidebar() {
                             </li>
                         </Link>
                         <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="/category" className="link">
-                        <li className="sidebarListItem">
-                            <AttachMoney className="sidebarIcon" />
-                            Category
+                            <li className="sidebarListItem">
+                                <AttachMoney className="sidebarIcon" />
+                                Category
 
                             </li>
                         </Link>
@@ -95,17 +95,20 @@ export default function Sidebar() {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Staff</h3>
                     <ul className="sidebarList">
-                        <Link onClick={() => window.location.reload()} style={{ color: 'inherit', textDecoration: 'inherit' }} to="/swagger/index.html"className="link">
-                        <li className="sidebarListItem">
-                            <WorkOutline className="sidebarIcon" />
-                            Manage
+                        <Link onClick={() => window.location.reload()} style={{ color: 'inherit', textDecoration: 'inherit' }} to="/swagger/index.html" className="link">
+                            <li className="sidebarListItem">
+                                <WorkOutline className="sidebarIcon" />
+                                Manage
+                            </li>
+                        </Link>
+                        <Link style={{ color: 'inherit', textDecoration: 'inherit' }} to="" className="link">
+                            <li className="sidebarListItem">
+
+                                <Timeline className="sidebarIcon" />
+                                Analytics
                             </li>
                         </Link>
 
-                        <li className="sidebarListItem">
-                            <Timeline className="sidebarIcon" />
-                            Analytics
-                        </li>
                         <li className="sidebarListItem">
                             <Report className="sidebarIcon" />
                             Reports
